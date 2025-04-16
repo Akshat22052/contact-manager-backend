@@ -155,22 +155,7 @@ Authorization: Bearer <your_jwt_token>
     * `404 Not Found`: Resource not found.
     * `500 Internal Server Error`: Generic server errors.
 
-## 🤝 Contributing
 
-Contributions are welcome! If you find a bug or want to suggest an improvement, please follow these steps:
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/your-feature-name` or `bugfix/issue-description`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -m 'Add some feature'`).
-5.  Push to the branch (`git push origin feature/your-feature-name`).
-6.  Open a Pull Request.
-
-Please ensure your code follows the existing style and includes relevant tests if applicable.
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details (if one exists, otherwise specify).
 
 ---
 
