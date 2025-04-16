@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 const {getContact,createContact,deleteContact,updateContact} = require('../controllers/contactControllers');
+const validateToken = require('../middlewares/validateTokenHandler');
 
 
 // router.get('/:id', (req, res) => {
@@ -13,7 +14,13 @@ const {getContact,createContact,deleteContact,updateContact} = require('../contr
 // }); 
 
 
-router.route("/:id").get(getContact).post(createContact).delete(deleteContact).put(updateContact);
+router.use(validateToken); // Apply token validation middleware to all routes in this router
+
+
+router.route("/").get(getContact).post(createContact);
+
+
+router.route("/:id").delete(deleteContact).put(updateContact);
 
 
 router.route("/:id").put(updateContact);

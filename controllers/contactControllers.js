@@ -81,7 +81,7 @@ const Contact = require("../models/contactModels"); // Import the Contact model
 // });
 
 const getContact = asyncHandler(async (req, res) => {
-   const contact = await Contact.findById(req.params.id);
+   const contact = await Contact.find({user_id : req.user.id}); // Find all contacts for the user
    if (!contact) {
         res.status(404);
         throw new Error("Contact not found!");
@@ -106,7 +106,8 @@ const createContact = asyncHandler(async (req, res) => {
     contact = await Contact.create({
         name,
         email,
-        phone
+        phone,
+        user_id : req.user.id
     }); // Create a new contact using the Contact model
     // If the contact is created successfully, send a success response
     // If validation passes, send a success response
