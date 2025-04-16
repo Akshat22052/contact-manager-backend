@@ -46,7 +46,9 @@ contact-manager-backend/
 ├── package.json            # Project metadata and dependencies
 ├── package-lock.json       # Records exact versions of dependencies
 ├── server.js               # Main application entry point
-└── README.md               # Project documentation (You are here!)
+└── README.md               # Project documentation (You are here!)```
+
+
 
 
 ## 📋 Prerequisites
