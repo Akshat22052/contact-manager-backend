@@ -8,9 +8,8 @@ const validateToken = require('../middlewares/validateTokenHandler');
 
 
 
-
-
 router.put("/register", RegisterUser);
+
 
 
 router.post("/login" , LoginUser);
